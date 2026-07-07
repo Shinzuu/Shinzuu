@@ -1,130 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="1000" height="320" role="img" aria-label="NERV terminal: god's in his heaven, all's right with the world — god is dead">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440" role="img" aria-label="NERV boot: synchronization rising, A.T. field collapses — god is dead">
   <style>
-    /* ---- palette ---- */
-    /* bg #0a0a0a · crimson #c20000 · bone #ededed · amber #ff6a00 */
-    .bg      { fill:#0a0a0a; }
-    .mono    { font-family:"Courier New",ui-monospace,monospace; }
-    .bone    { fill:#ededed; }
-    .crim    { fill:#c20000; }
-    .amber   { fill:#ff6a00; }
-    .dim     { fill:#5a5a5a; }
+    .mono { font-family:"Courier New",ui-monospace,monospace; }
+    /* HELL palette — dried blood, ash, dying ember, near-black */
+    .ash { fill:#a89f9b; } .blood { fill:#8a0f0f; } .ember { fill:#9a3410; } .dim { fill:#463f3c; } .dk { fill:#4a0808; }
 
-    /* ---- global CRT flicker ---- */
-    #screen { animation: flicker 6s infinite steps(1); }
-    @keyframes flicker {
-      0%,97%,100% { opacity:1; } 97.5% { opacity:.82; } 98.5% { opacity:.94; }
-    }
+    #screen { animation: flick 7s steps(1) infinite; }
+    @keyframes flick { 0%,96%,100%{opacity:1} 96.5%{opacity:.74} 97.5%{opacity:.9} 98.5%{opacity:.8} }
+    #hexfield { animation: breathe 9s ease-in-out infinite; }
+    @keyframes breathe { 0%,100%{opacity:.04} 50%{opacity:.085} }
+    #vignette { animation: glow 6s ease-in-out infinite; }
+    @keyframes glow { 0%,100%{opacity:.28} 50%{opacity:.52} }
+    #hellglow { animation: ember 4s ease-in-out infinite; }
+    @keyframes ember { 0%,100%{opacity:.18} 50%{opacity:.4} }
+    #scan { animation: drift 8s linear infinite; opacity:.07; }
+    @keyframes drift { from{transform:translateY(0)} to{transform:translateY(6px)} }
+    #ring { transform-origin:78px 78px; animation: spin 30s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
 
-    /* ---- scanline drift ---- */
-    #scan { animation: drift 8s linear infinite; opacity:.12; }
-    @keyframes drift { from { transform:translateY(0); } to { transform:translateY(6px); } }
+    .boot { opacity:0; }
+    #b1 { animation: boot 14s infinite; }
+    #b2 { animation: boot 14s infinite; animation-delay:.5s; }
+    #b3 { animation: boot 14s infinite; animation-delay:1s; }
+    @keyframes boot { 0%{opacity:0; transform:translateX(-10px)} 6%{opacity:1; transform:translateX(0)} 92%{opacity:1} 100%{opacity:.85} }
+    /* A.T. FIELD status decays ACTIVE -> COLLAPSED at the corruption */
+    #atStat { animation: ats 14s infinite; }
+    @keyframes ats { 0%,55%{opacity:1} 57%,59%{opacity:0} 60%{opacity:1} }
+    #atFail { animation: atf 14s infinite; opacity:0; }
+    @keyframes atf { 0%,57%{opacity:0} 59%{opacity:1} 100%{opacity:.9} }
 
-    /* ---- typewriter reveal of line A (via clip width) ---- */
-    #typeRect { animation: type 12s steps(30) infinite; }
-    @keyframes type {
-      0%   { width:0; }
-      22%  { width:740px; }
-      40%  { width:740px; }   /* hold */
-      41%  { width:0; }       /* clear as we cut to corruption */
-      100% { width:0; }
-    }
-    /* line A visible then dies */
-    #lineA { animation: aLife 12s infinite; }
-    @keyframes aLife {
-      0%,39%   { opacity:1; }
-      41%,44%  { opacity:0; }
-      46%      { opacity:.25; }  /* dying gasp */
-      48%,100% { opacity:0; }
-    }
-    /* blinking cursor, only during line A */
-    #cursor { animation: blink 1s steps(1) infinite, curLife 12s infinite; }
-    @keyframes blink { 0%,50%{opacity:1;} 51%,100%{opacity:0;} }
-    @keyframes curLife { 0%,40%{visibility:visible;} 41%,100%{visibility:hidden;} }
+    #syncFill { animation: sync 14s infinite; }
+    @keyframes sync { 0%,14%{width:0px} 30%{width:150px} 56%{width:150px} 60%{width:36px} 100%{width:36px} }
+    #syncPct { animation: bootp 14s infinite; opacity:0; }
+    @keyframes bootp { 0%,16%{opacity:0} 22%{opacity:1} 100%{opacity:1} }
 
-    /* ---- corrupted line B appears with violent glitch, then settles ---- */
-    #lineB { animation: bLife 12s infinite; }
-    @keyframes bLife {
-      0%,40%   { opacity:0; }
-      41%      { opacity:1; }
-      100%     { opacity:1; }
-    }
-    /* jitter the whole corrupted group hard at swap, subtle after */
-    #glitch { animation: jitter 12s infinite; }
+    #typeRect { animation: type 14s steps(34) infinite; }
+    @keyframes type { 0%,34%{width:0} 50%{width:760px} 56%{width:760px} 57%{width:0} 100%{width:0} }
+    #lineA { animation: aLife 14s infinite; }
+    @keyframes aLife { 0%,55%{opacity:1} 57%,59%{opacity:0} 61%{opacity:.2} 63%,100%{opacity:0} }
+    #cursor { animation: blink 1s steps(1) infinite, curLife 14s infinite; }
+    @keyframes blink { 0%,50%{opacity:1} 51%,100%{opacity:0} }
+    @keyframes curLife { 0%,55%{visibility:visible} 56%,100%{visibility:hidden} }
+
+    #lineB { animation: bLife 14s infinite; }
+    @keyframes bLife { 0%,56%{opacity:0} 57%{opacity:1} 100%{opacity:1} }
+    #glitch { animation: jitter 14s infinite; }
     @keyframes jitter {
-      0%,40%      { transform:translate(0,0); }
-      41%         { transform:translate(-6px,2px); }
-      42%         { transform:translate(5px,-2px); }
-      43%         { transform:translate(-3px,1px); }
-      44%         { transform:translate(2px,0); }
-      45%,88%     { transform:translate(0,0); }
-      89%         { transform:translate(-2px,0); }
-      90%         { transform:translate(2px,0); }
-      91%,100%    { transform:translate(0,0); }
-    }
-    /* crimson RGB-split ghost of DEAD */
-    #ghost { animation: ghost 12s infinite; opacity:0; }
-    @keyframes ghost {
-      0%,40%   { opacity:0; transform:translate(0,0); }
-      41%      { opacity:.85; transform:translate(4px,-1px); }
-      44%      { opacity:.5;  transform:translate(-3px,1px); }
-      50%,100% { opacity:.28; transform:translate(2px,0); }
-    }
-    /* the word DEAD pulses */
-    #dead { animation: pulse 2.2s ease-in-out infinite; }
-    @keyframes pulse { 0%,100%{ fill:#c20000; } 50%{ fill:#ff2b2b; } }
+      0%,56%{transform:translate(0,0)} 57%{transform:translate(-7px,2px)} 58%{transform:translate(6px,-3px)}
+      59%{transform:translate(-4px,1px)} 60%{transform:translate(3px,0)} 61%,90%{transform:translate(0,0)}
+      91%{transform:translate(-2px,0)} 92%{transform:translate(2px,0)} 93%,100%{transform:translate(0,0)} }
+    #ghostR { animation: gR 14s infinite; opacity:0; }
+    @keyframes gR { 0%,56%{opacity:0;transform:translate(0,0)} 57%{opacity:.8;transform:translate(5px,-1px)} 61%{opacity:.45;transform:translate(-3px,1px)} 64%,100%{opacity:.28;transform:translate(3px,0)} }
+    #ghostE { animation: gE 14s infinite; opacity:0; }
+    @keyframes gE { 0%,56%{opacity:0;transform:translate(0,0)} 57%{opacity:.5;transform:translate(-5px,1px)} 64%,100%{opacity:.16;transform:translate(-3px,0)} }
+    #dead { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{fill:#8a0f0f} 50%{fill:#b31d1d} }
+    #tear { animation: tear 14s steps(1) infinite; opacity:0; }
+    @keyframes tear { 0%,56%{opacity:0} 57%{opacity:1;transform:translateY(-6px)} 58%{opacity:0} 72%{opacity:0} 73%{opacity:1;transform:translateY(4px)} 74%{opacity:0} 100%{opacity:0} }
 
-    /* [SIGNAL CORRUPTED] tag flicker */
-    #sig { animation: sig 12s infinite; opacity:0; }
-    @keyframes sig {
-      0%,40%   { opacity:0; }
-      41%,43%  { opacity:1; } 44%{opacity:0;} 46%{opacity:1;} 48%{opacity:.6;}
-      70%      { opacity:.6; } 71%{opacity:0;} 73%{opacity:.6;} 100%{opacity:.6;}
-    }
-
-    /* MAGI status indicator blink */
-    #led { animation: led 1.6s steps(1) infinite; }
-    @keyframes led { 0%,60%{opacity:1;} 61%,100%{opacity:.15;} }
+    #sig { animation: sig 14s infinite; opacity:0; }
+    @keyframes sig { 0%,56%{opacity:0} 57%,59%{opacity:1} 60%{opacity:0} 62%{opacity:1} 64%{opacity:.55} 100%{opacity:.55} }
+    #led { animation: ledb 1.8s steps(1) infinite; }
+    @keyframes ledb { 0%,55%{opacity:1} 56%,100%{opacity:.12} }
   </style>
 
   <defs>
-    <clipPath id="typeClip"><rect id="typeRect" x="130" y="120" width="0" height="60"/></clipPath>
-    <pattern id="lines" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1" y="0" fill="#ffffff"/>
+    <clipPath id="typeClip"><rect id="typeRect" x="120" y="222" width="0" height="52"/></clipPath>
+    <pattern id="hex" width="56" height="48" patternUnits="userSpaceOnUse">
+      <path d="M14 0 L42 0 L56 24 L42 48 L14 48 L0 24 Z" fill="none" stroke="#2a0808" stroke-width="1"/>
     </pattern>
-    <filter id="soft"><feGaussianBlur stdDeviation="0.4"/></filter>
+    <radialGradient id="vig" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#7a0d0d" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#230404" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hell" cx="50%" cy="118%" r="70%">
+      <stop offset="0%" stop-color="#9a3410" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#4a0808" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="lines" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#ffffff"/></pattern>
+    <filter id="soft"><feGaussianBlur stdDeviation="0.55"/></filter>
   </defs>
 
-  <rect class="bg" width="1000" height="320"/>
+  <rect width="1000" height="440" fill="#050505"/>
+  <rect id="hexfield" width="1000" height="440" fill="url(#hex)"/>
+  <rect id="hellglow" width="1000" height="440" fill="url(#hell)"/>
+  <rect id="vignette" width="1000" height="440" fill="url(#vig)"/>
 
   <g id="screen">
-    <!-- scanlines -->
-    <g id="scan"><rect x="0" y="-6" width="1000" height="332" fill="url(#lines)"/></g>
+    <g id="scan"><rect x="0" y="-6" width="1000" height="452" fill="url(#lines)"/></g>
 
-    <!-- top chrome -->
-    <text class="mono crim" x="130" y="66" font-size="34" letter-spacing="14" font-weight="bold">N E R V</text>
-    <text class="mono dim"  x="132" y="90" font-size="13" letter-spacing="3">SPECIAL AGENCY // 特務機関</text>
-    <text id="sig" class="mono amber" x="730" y="66" font-size="13" letter-spacing="2">[ SIGNAL CORRUPTED ]</text>
-    <line x1="130" y1="100" x2="870" y2="100" stroke="#c20000" stroke-width="1" opacity="0.5"/>
+    <g transform="translate(42,26)">
+      <g id="ring">
+        <path d="M36 8 L64 8 L78 40 L64 72 L36 72 L22 40 Z" fill="none" stroke="#8a0f0f" stroke-width="2"/>
+        <path d="M44 22 L58 22 L66 40 L58 58 L44 58 L36 40 Z" fill="none" stroke="#4a0808" stroke-width="1.5"/>
+      </g>
+      <text class="mono blood" x="30" y="46" font-size="20" letter-spacing="4" font-weight="bold">N</text>
+    </g>
+    <text class="mono blood" x="140" y="52" font-size="30" letter-spacing="14" font-weight="bold">N E R V</text>
+    <text class="mono dim"  x="142" y="74" font-size="12" letter-spacing="3">特務機関ネルフ // SPECIAL AGENCY</text>
+    <text id="sig" class="mono ember" x="700" y="46" font-size="13" letter-spacing="2">[ A.T. FIELD COLLAPSED ]</text>
 
-    <!-- LINE A: the motto, typed -->
+    <g class="mono" font-size="14" letter-spacing="1">
+      <text id="b1" class="boot dim" x="120" y="118">&gt; MAGI SYSTEM · MELCHIOR·BALTHASAR·CASPER ....... <tspan class="blood">ONLINE</tspan></text>
+      <text id="b2" class="boot dim" x="120" y="142">&gt; A.T. FIELD ....................................... <tspan id="atStat" class="ember">ACTIVE</tspan><tspan id="atFail" class="blood">FAILING</tspan></text>
+      <text id="b3" class="boot dim" x="120" y="166">&gt; SYNCHRONIZATION</text>
+    </g>
+    <rect x="300" y="155" width="150" height="12" fill="none" stroke="#4a0808" stroke-width="1"/>
+    <rect id="syncFill" x="300" y="155" width="0" height="12" fill="#8a0f0f"/>
+    <text id="syncPct" class="mono ash" x="462" y="166" font-size="13">41.3%  RISING</text>
+
+    <line x1="120" y1="192" x2="880" y2="192" stroke="#8a0f0f" stroke-width="1" opacity="0.32"/>
+
     <g clip-path="url(#typeClip)">
-      <text id="lineA" class="mono bone" x="130" y="160" font-size="30">god's in his heaven, all's right with the world</text>
+      <text id="lineA" class="mono ash" x="120" y="258" font-size="30">god's in his heaven, all's right with the world</text>
     </g>
-    <rect id="cursor" x="132" y="136" width="14" height="30" fill="#ededed"/>
+    <rect id="cursor" x="122" y="234" width="14" height="30" fill="#a89f9b"/>
 
-    <!-- LINE B: the corruption -->
     <g id="glitch">
-      <text id="ghost" class="mono crim" x="130" y="160" font-size="30" filter="url(#soft)">god is DEAD, all's right with the world</text>
-      <text id="lineB" class="mono bone" x="130" y="160" font-size="30">god is <tspan id="dead" class="crim" font-weight="bold">DEAD</tspan>, all's right with the world</text>
+      <text id="ghostE" class="mono" x="120" y="258" font-size="30" fill="#6a2408" filter="url(#soft)">god is DEAD, all's right with the world</text>
+      <text id="ghostR" class="mono blood" x="120" y="258" font-size="30" filter="url(#soft)">god is DEAD, all's right with the world</text>
+      <text id="lineB" class="mono ash" x="120" y="258" font-size="30">god is <tspan id="dead" class="blood" font-weight="bold">DEAD</tspan>, all's right with the world</text>
+      <rect id="tear" x="120" y="240" width="760" height="10" fill="#050505"/>
     </g>
 
-    <!-- MAGI status bar -->
-    <line x1="130" y1="222" x2="870" y2="222" stroke="#c20000" stroke-width="1" opacity="0.35"/>
-    <text class="mono dim" x="130" y="256" font-size="14" letter-spacing="1">
-      MAGI // <tspan class="bone">MELCHIOR</tspan> · <tspan class="bone">BALTHASAR</tspan> · <tspan class="bone">CASPER</tspan>
-    </text>
-    <circle id="led" cx="742" cy="251" r="5" fill="#c20000"/>
-    <text class="mono crim" x="756" y="256" font-size="14" letter-spacing="2">OPERATIONAL</text>
-    <text class="mono dim" x="130" y="284" font-size="12" letter-spacing="1">PATTERN: <tspan class="amber">BLUE</tspan>   ·   AT FIELD: <tspan class="amber">ACTIVE</tspan>   ·   PILOT: <tspan class="bone">shinzuu</tspan>   ·   UNIT-01</text>
+    <line x1="120" y1="322" x2="880" y2="322" stroke="#8a0f0f" stroke-width="1" opacity="0.24"/>
+    <circle id="led" cx="128" cy="356" r="5" fill="#8a0f0f"/>
+    <text class="mono blood" x="142" y="361" font-size="14" letter-spacing="2">OPERATIONAL</text>
+    <text class="mono dim" x="300" y="361" font-size="13" letter-spacing="1">USER: <tspan class="ash">shinzuu</tspan>  ·  HOST: <tspan class="ash">eva-01</tspan>  ·  UPLINK: <tspan class="ember">SECURE</tspan></text>
+    <text class="mono dim" x="120" y="392" font-size="12" letter-spacing="2">AI AUTOMATION · n8n · Make · Zapier · GoHighLevel</text>
   </g>
 </svg>

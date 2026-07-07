@@ -1,87 +1,51 @@
 <!--
-  Shinzuu — profile README (NERV / EVA-01 theme)
-  The banner (assets/nerv.svg) is a hand-authored, inline-CSS animated SVG.
-  SMIL is stripped by GitHub's camo proxy; inline <style> @keyframes are not — that's why it animates.
+  Shinzuu — profile README (NERV / EVA-01 aesthetic)
+  Banner + dividers: hand-authored inline-CSS animated SVGs (SMIL is stripped by GitHub's
+  camo proxy; inline <style> @keyframes render). Cycling lines: readme-typing-svg. No distro flex.
 -->
 
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/main/assets/nerv.svg" alt="NERV — god's in his heaven, all's right with the world → god is dead" width="100%"/>
 
-<br/>
-
-<img src="https://komarev.com/ghpvc/?username=Shinzuu&label=SOULS%20HARVESTED&color=c20000&style=flat-square" alt="views"/>
-
-</div>
-
----
-
-<div align="center">
-
-### ⬡ CLASSIFICATION ⬡
-
-`Linux ricer` &nbsp;·&nbsp; `ML researcher` &nbsp;·&nbsp; `terminal-dweller`
-
-Breaks Linux on purpose, then documents the autopsy. Builds voice-dictation
-tooling and speech/ML pipelines when not re-tiling the same two monitors for
-the hundredth time.
+<a href="#"><img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=18&pause=1400&color=8A0F0F&center=true&vCenter=true&width=820&lines=YOU+ARE+%28NOT%29+ALONE;YOU+CAN+%28NOT%29+ADVANCE;YOU+CAN+%28NOT%29+REDO;THRICE+UPON+A+TIME" alt="you can (not) redo"/></a>
 
 <br/>
 
-![EndeavourOS](https://img.shields.io/badge/EndeavourOS-0a0a0a?style=flat-square&logo=endeavouros&logoColor=c20000)
-![KDE Plasma](https://img.shields.io/badge/KDE_Plasma-0a0a0a?style=flat-square&logo=kde&logoColor=c20000)
-![kitty](https://img.shields.io/badge/kitty-0a0a0a?style=flat-square&logo=kitty&logoColor=c20000)
-![Neovim](https://img.shields.io/badge/Neovim-0a0a0a?style=flat-square&logo=neovim&logoColor=c20000)
-<br/>
-![Python](https://img.shields.io/badge/Python-0a0a0a?style=flat-square&logo=python&logoColor=ff6a00)
-![PyTorch](https://img.shields.io/badge/PyTorch-0a0a0a?style=flat-square&logo=pytorch&logoColor=ff6a00)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-0a0a0a?style=flat-square&logo=huggingface&logoColor=ff6a00)
-![Whisper](https://img.shields.io/badge/Whisper-0a0a0a?style=flat-square&logo=openai&logoColor=ff6a00)
-![Bash](https://img.shields.io/badge/Bash-0a0a0a?style=flat-square&logo=gnubash&logoColor=ff6a00)
+<img src="https://komarev.com/ghpvc/?username=Shinzuu&label=connections&color=8a0f0f&style=flat-square" alt="connections"/>
 
-</div>
+<img src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/main/assets/hexdiv.svg" width="60%" alt="---"/>
 
----
+### ⬡ STACK ⬡
 
-<div align="center">
+![OpenAI](https://img.shields.io/badge/OpenAI-050505?style=flat-square&logo=openai&logoColor=9a3410)
+![Anthropic](https://img.shields.io/badge/Anthropic-050505?style=flat-square&logo=anthropic&logoColor=9a3410)
+![n8n](https://img.shields.io/badge/n8n-050505?style=flat-square&logo=n8n&logoColor=9a3410)
+![Make](https://img.shields.io/badge/Make-050505?style=flat-square&logo=make&logoColor=9a3410)
+![Zapier](https://img.shields.io/badge/Zapier-050505?style=flat-square&logo=zapier&logoColor=9a3410)
+![GoHighLevel](https://img.shields.io/badge/GoHighLevel-050505?style=flat-square&logoColor=8a0f0f)
 
-### ⬡ COMBAT RECORD ⬡
+<sub>ai automation · workflow orchestration · integrations</sub>
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Shinzuu&show_icons=true&count_private=true&hide_border=false&bg_color=0a0a0a&title_color=c20000&icon_color=ff6a00&text_color=ededed&border_color=c20000" alt="stats"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shinzuu&layout=compact&langs_count=8&hide_border=false&bg_color=0a0a0a&title_color=c20000&text_color=ededed&border_color=c20000" alt="top langs"/>
+<img src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/main/assets/hexdiv.svg" width="60%" alt="---"/>
 
-<br/>
+### ⬡ ACTIVITY ⬡
 
-<img width="98%" src="https://streak-stats.demolab.com/?user=Shinzuu&hide_border=false&background=0a0a0a&border=c20000&ring=c20000&fire=ff6a00&currStreakLabel=c20000&sideLabels=ededed&currStreakNum=ededed&sideNums=ededed&dates=5a5a5a&stroke=c20000" alt="streak"/>
+<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=Shinzuu&bg_color=050505&color=a89f9b&line=8a0f0f&point=9a3410&area=true&area_color=8a0f0f&hide_border=true&custom_title=ACTIVITY" alt="activity graph"/>
 
-</div>
+<!-- CONTRIBUTIONS (snake) — re-enable once the snake workflow has run (needs `workflow` token scope)
+<img src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/main/assets/hexdiv.svg" width="60%" alt="---"/>
 
----
+### ⬡ CONTRIBUTIONS ⬡
 
-<div align="center">
-
-### ⬡ SYNC HISTORY ⬡
-
-<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=Shinzuu&bg_color=0a0a0a&color=ededed&line=c20000&point=ff6a00&area=true&area_color=c20000&hide_border=true&custom_title=EVA-01%20ACTIVITY" alt="activity graph"/>
-
-</div>
-
----
-
-<div align="center">
-
-### ⬡ THE RED SEA ⬡
-
-<!-- Snake animation (Platane/snk) — generated by the workflow, served from the `output` branch. -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Shinzuu/Shinzuu/output/github-contribution-grid-snake-dark.svg"/>
   <img alt="contribution snake" src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/output/github-contribution-grid-snake.svg"/>
 </picture>
+-->
 
 <br/><br/>
 
-`I mustn't run away.` &nbsp; `I mustn't run away.` &nbsp; `I mustn't run away.`
-
-<sub>god is dead — and all's right with the world.</sub>
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=17&pause=2200&color=6A5F5C&center=true&vCenter=true&width=880&lines=god+is+dead+%E2%80%94+and+all%27s+right+with+the+world;Death+may+be+the+only+absolute+freedom+there+is.;Anywhere+can+be+paradise%2C+as+long+as+you+have+the+will+to+live.;The+fate+of+destruction+is+also+the+joy+of+rebirth." alt="quotes"/>
 
 </div>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 40" width="900" height="40" role="img" aria-label="A.T. field divider">
+  <style>
+    .h { fill:none; stroke:#4a0808; stroke-width:1.5; opacity:.3; }
+    .p { animation: pulse 3.4s ease-in-out infinite; }
+    .p:nth-child(1){animation-delay:0s}.p:nth-child(2){animation-delay:.18s}.p:nth-child(3){animation-delay:.36s}
+    .p:nth-child(4){animation-delay:.54s}.p:nth-child(5){animation-delay:.72s}.p:nth-child(6){animation-delay:.9s}
+    .p:nth-child(7){animation-delay:1.08s}
+    @keyframes pulse { 0%,100%{opacity:.12;stroke:#3a0606} 50%{opacity:.7;stroke:#8a0f0f} }
+    #l { animation: sweep 3.4s ease-in-out infinite; }
+    @keyframes sweep { 0%,100%{opacity:.1} 50%{opacity:.4} }
+  </style>
+  <line id="l" x1="20" y1="20" x2="880" y2="20" stroke="#8a0f0f" stroke-width="1"/>
+  <g transform="translate(450,20)">
+    <path class="h p" d="M-84 0 L-78 -10 L-66 -10 L-60 0 L-66 10 L-78 10 Z"/>
+    <path class="h p" d="M-56 0 L-50 -10 L-38 -10 L-32 0 L-38 10 L-50 10 Z"/>
+    <path class="h p" d="M-28 0 L-22 -10 L-10 -10 L-4 0 L-10 10 L-22 10 Z"/>
+    <path class="h p" d="M0 0 L6 -10 L18 -10 L24 0 L18 10 L6 10 Z" stroke-width="2"/>
+    <path class="h p" d="M28 0 L34 -10 L46 -10 L52 0 L46 10 L34 10 Z"/>
+    <path class="h p" d="M56 0 L62 -10 L74 -10 L80 0 L74 10 L62 10 Z"/>
+    <path class="h p" d="M84 0 L90 -10 L102 -10 L108 0 L102 10 L90 10 Z"/>
+  </g>
+</svg>
