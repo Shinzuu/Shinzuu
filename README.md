@@ -1,9 +1,3 @@
-<!--
-  Shinzuu — profile README (NERV / EVA-01 aesthetic)
-  Banner + dividers: hand-authored inline-CSS animated SVGs (SMIL is stripped by GitHub's
-  camo proxy; inline <style> @keyframes render). Cycling lines: readme-typing-svg. No distro flex.
--->
-
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/main/assets/nerv.svg" alt="NERV — god's in his heaven, all's right with the world → god is dead" width="100%"/>
