@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="1000" height="320" role="img" aria-label="NERV terminal: god's in his heaven, all's right with the world — god is dead">
+  <style>
+    /* ---- palette ---- */
+    /* bg #0a0a0a · crimson #c20000 · bone #ededed · amber #ff6a00 */
+    .bg      { fill:#0a0a0a; }
+    .mono    { font-family:"Courier New",ui-monospace,monospace; }
+    .bone    { fill:#ededed; }
+    .crim    { fill:#c20000; }
+    .amber   { fill:#ff6a00; }
+    .dim     { fill:#5a5a5a; }
+
+    /* ---- global CRT flicker ---- */
+    #screen { animation: flicker 6s infinite steps(1); }
+    @keyframes flicker {
+      0%,97%,100% { opacity:1; } 97.5% { opacity:.82; } 98.5% { opacity:.94; }
+    }
+
+    /* ---- scanline drift ---- */
+    #scan { animation: drift 8s linear infinite; opacity:.12; }
+    @keyframes drift { from { transform:translateY(0); } to { transform:translateY(6px); } }
+
+    /* ---- typewriter reveal of line A (via clip width) ---- */
+    #typeRect { animation: type 12s steps(30) infinite; }
+    @keyframes type {
+      0%   { width:0; }
+      22%  { width:740px; }
+      40%  { width:740px; }   /* hold */
+      41%  { width:0; }       /* clear as we cut to corruption */
+      100% { width:0; }
+    }
+    /* line A visible then dies */
+    #lineA { animation: aLife 12s infinite; }
+    @keyframes aLife {
+      0%,39%   { opacity:1; }
+      41%,44%  { opacity:0; }
+      46%      { opacity:.25; }  /* dying gasp */
+      48%,100% { opacity:0; }
+    }
+    /* blinking cursor, only during line A */
+    #cursor { animation: blink 1s steps(1) infinite, curLife 12s infinite; }
+    @keyframes blink { 0%,50%{opacity:1;} 51%,100%{opacity:0;} }
+    @keyframes curLife { 0%,40%{visibility:visible;} 41%,100%{visibility:hidden;} }
+
+    /* ---- corrupted line B appears with violent glitch, then settles ---- */
+    #lineB { animation: bLife 12s infinite; }
+    @keyframes bLife {
+      0%,40%   { opacity:0; }
+      41%      { opacity:1; }
+      100%     { opacity:1; }
+    }
+    /* jitter the whole corrupted group hard at swap, subtle after */
+    #glitch { animation: jitter 12s infinite; }
+    @keyframes jitter {
+      0%,40%      { transform:translate(0,0); }
+      41%         { transform:translate(-6px,2px); }
+      42%         { transform:translate(5px,-2px); }
+      43%         { transform:translate(-3px,1px); }
+      44%         { transform:translate(2px,0); }
+      45%,88%     { transform:translate(0,0); }
+      89%         { transform:translate(-2px,0); }
+      90%         { transform:translate(2px,0); }
+      91%,100%    { transform:translate(0,0); }
+    }
+    /* crimson RGB-split ghost of DEAD */
+    #ghost { animation: ghost 12s infinite; opacity:0; }
+    @keyframes ghost {
+      0%,40%   { opacity:0; transform:translate(0,0); }
+      41%      { opacity:.85; transform:translate(4px,-1px); }
+      44%      { opacity:.5;  transform:translate(-3px,1px); }
+      50%,100% { opacity:.28; transform:translate(2px,0); }
+    }
+    /* the word DEAD pulses */
+    #dead { animation: pulse 2.2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{ fill:#c20000; } 50%{ fill:#ff2b2b; } }
+
+    /* [SIGNAL CORRUPTED] tag flicker */
+    #sig { animation: sig 12s infinite; opacity:0; }
+    @keyframes sig {
+      0%,40%   { opacity:0; }
+      41%,43%  { opacity:1; } 44%{opacity:0;} 46%{opacity:1;} 48%{opacity:.6;}
+      70%      { opacity:.6; } 71%{opacity:0;} 73%{opacity:.6;} 100%{opacity:.6;}
+    }
+
+    /* MAGI status indicator blink */
+    #led { animation: led 1.6s steps(1) infinite; }
+    @keyframes led { 0%,60%{opacity:1;} 61%,100%{opacity:.15;} }
+  </style>
+
+  <defs>
+    <clipPath id="typeClip"><rect id="typeRect" x="130" y="120" width="0" height="60"/></clipPath>
+    <pattern id="lines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" y="0" fill="#ffffff"/>
+    </pattern>
+    <filter id="soft"><feGaussianBlur stdDeviation="0.4"/></filter>
+  </defs>
+
+  <rect class="bg" width="1000" height="320"/>
+
+  <g id="screen">
+    <!-- scanlines -->
+    <g id="scan"><rect x="0" y="-6" width="1000" height="332" fill="url(#lines)"/></g>
+
+    <!-- top chrome -->
+    <text class="mono crim" x="130" y="66" font-size="34" letter-spacing="14" font-weight="bold">N E R V</text>
+    <text class="mono dim"  x="132" y="90" font-size="13" letter-spacing="3">SPECIAL AGENCY // 特務機関</text>
+    <text id="sig" class="mono amber" x="730" y="66" font-size="13" letter-spacing="2">[ SIGNAL CORRUPTED ]</text>
+    <line x1="130" y1="100" x2="870" y2="100" stroke="#c20000" stroke-width="1" opacity="0.5"/>
+
+    <!-- LINE A: the motto, typed -->
+    <g clip-path="url(#typeClip)">
+      <text id="lineA" class="mono bone" x="130" y="160" font-size="30">god's in his heaven, all's right with the world</text>
+    </g>
+    <rect id="cursor" x="132" y="136" width="14" height="30" fill="#ededed"/>
+
+    <!-- LINE B: the corruption -->
+    <g id="glitch">
+      <text id="ghost" class="mono crim" x="130" y="160" font-size="30" filter="url(#soft)">god is DEAD, all's right with the world</text>
+      <text id="lineB" class="mono bone" x="130" y="160" font-size="30">god is <tspan id="dead" class="crim" font-weight="bold">DEAD</tspan>, all's right with the world</text>
+    </g>
+
+    <!-- MAGI status bar -->
+    <line x1="130" y1="222" x2="870" y2="222" stroke="#c20000" stroke-width="1" opacity="0.35"/>
+    <text class="mono dim" x="130" y="256" font-size="14" letter-spacing="1">
+      MAGI // <tspan class="bone">MELCHIOR</tspan> · <tspan class="bone">BALTHASAR</tspan> · <tspan class="bone">CASPER</tspan>
+    </text>
+    <circle id="led" cx="742" cy="251" r="5" fill="#c20000"/>
+    <text class="mono crim" x="756" y="256" font-size="14" letter-spacing="2">OPERATIONAL</text>
+    <text class="mono dim" x="130" y="284" font-size="12" letter-spacing="1">PATTERN: <tspan class="amber">BLUE</tspan>   ·   AT FIELD: <tspan class="amber">ACTIVE</tspan>   ·   PILOT: <tspan class="bone">shinzuu</tspan>   ·   UNIT-01</text>
+  </g>
+</svg>
