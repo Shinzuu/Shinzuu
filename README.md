@@ -33,7 +33,6 @@
 
 <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=Shinzuu&bg_color=050505&color=a89f9b&line=8a0f0f&point=9a3410&area=true&area_color=8a0f0f&hide_border=true&custom_title=ACTIVITY" alt="activity graph"/>
 
-<!-- CONTRIBUTIONS (snake) — re-enable once the snake workflow has run (needs `workflow` token scope)
 <img src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/main/assets/hexdiv.svg" width="60%" alt="---"/>
 
 ### ⬡ CONTRIBUTIONS ⬡
@@ -42,7 +41,6 @@
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Shinzuu/Shinzuu/output/github-contribution-grid-snake-dark.svg"/>
   <img alt="contribution snake" src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/output/github-contribution-grid-snake.svg"/>
 </picture>
--->
 
 <br/><br/>
 
