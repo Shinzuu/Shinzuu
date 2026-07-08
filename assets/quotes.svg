@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 44" width="880" height="44" role="img" aria-label="god is dead and all's right with the world; death may be the only absolute freedom there is; anywhere can be paradise as long as you have the will to live; the fate of destruction is also the joy of rebirth">
+  <style>
+    text { font-family:"Courier New",ui-monospace,monospace; font-weight:500; font-size:16px; letter-spacing:1px; fill:#6a5f5c; }
+    .l { opacity:0; animation: cyc 16s infinite; }
+    .l1 { animation-delay:0s } .l2 { animation-delay:4s } .l3 { animation-delay:8s } .l4 { animation-delay:12s }
+    @keyframes cyc { 0%{opacity:0} 2%{opacity:1} 22%{opacity:1} 25%{opacity:0} 100%{opacity:0} }
+  </style>
+  <text class="l l1" x="440" y="28" text-anchor="middle">god is dead — and all's right with the world</text>
+  <text class="l l2" x="440" y="28" text-anchor="middle">Death may be the only absolute freedom there is.</text>
+  <text class="l l3" x="440" y="28" text-anchor="middle">Anywhere can be paradise, as long as you have the will to live.</text>
+  <text class="l l4" x="440" y="28" text-anchor="middle">The fate of destruction is also the joy of rebirth.</text>
+</svg>

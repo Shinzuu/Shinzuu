@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 44" width="820" height="44" role="img" aria-label="you are (not) alone; you can (not) advance; you can (not) redo; thrice upon a time">
+  <style>
+    text { font-family:"Courier New",ui-monospace,monospace; font-weight:700; font-size:18px; letter-spacing:2px; fill:#8a0f0f; }
+    .l { opacity:0; animation: cyc 12s infinite; }
+    .l1 { animation-delay:0s } .l2 { animation-delay:3s } .l3 { animation-delay:6s } .l4 { animation-delay:9s }
+    @keyframes cyc { 0%{opacity:0} 3%{opacity:1} 22%{opacity:1} 25%{opacity:0} 100%{opacity:0} }
+  </style>
+  <text class="l l1" x="410" y="28" text-anchor="middle">YOU ARE (NOT) ALONE</text>
+  <text class="l l2" x="410" y="28" text-anchor="middle">YOU CAN (NOT) ADVANCE</text>
+  <text class="l l3" x="410" y="28" text-anchor="middle">YOU CAN (NOT) REDO</text>
+  <text class="l l4" x="410" y="28" text-anchor="middle">THRICE UPON A TIME</text>
+</svg>
