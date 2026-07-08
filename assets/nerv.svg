@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440" role="img" aria-label="NERV boot: synchronization rising, A.T. field collapses — god is dead">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420" role="img" aria-label="NERV boot: synchronization rising, A.T. field collapses — god is dead">
   <style>
     .mono { font-family:"Courier New",ui-monospace,monospace; }
     /* HELL palette — dried blood, ash, dying ember, near-black */
@@ -82,18 +82,18 @@
     <filter id="soft"><feGaussianBlur stdDeviation="0.55"/></filter>
     <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#050505" stop-opacity="1"/>
-      <stop offset="91%" stop-color="#050505" stop-opacity="1"/>
+      <stop offset="95%" stop-color="#050505" stop-opacity="1"/>
       <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
-  <rect width="1000" height="440" fill="url(#fade)"/>
-  <rect id="hexfield" width="1000" height="440" fill="url(#hex)"/>
-  <rect id="hellglow" width="1000" height="440" fill="url(#hell)"/>
-  <rect id="vignette" width="1000" height="440" fill="url(#vig)"/>
+  <rect width="1000" height="420" fill="url(#fade)"/>
+  <rect id="hexfield" width="1000" height="420" fill="url(#hex)"/>
+  <rect id="hellglow" width="1000" height="420" fill="url(#hell)"/>
+  <rect id="vignette" width="1000" height="420" fill="url(#vig)"/>
 
   <g id="screen">
-    <g id="scan"><rect x="0" y="-6" width="1000" height="452" fill="url(#lines)"/></g>
+    <g id="scan"><rect x="0" y="-6" width="1000" height="432" fill="url(#lines)"/></g>
 
     <g transform="translate(42,26)">
       <g id="ring">

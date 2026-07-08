@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/main/assets/nerv.svg" alt="NERV — god's in his heaven, all's right with the world → god is dead" width="100%"/>
 
-<a href="#"><img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=18&pause=1400&color=8A0F0F&center=true&vCenter=true&width=820&lines=YOU+ARE+%28NOT%29+ALONE;YOU+CAN+%28NOT%29+ADVANCE;YOU+CAN+%28NOT%29+REDO;THRICE+UPON+A+TIME" alt="you can (not) redo"/></a>
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=18&pause=1400&color=8A0F0F&center=true&vCenter=true&width=820&lines=YOU+ARE+%28NOT%29+ALONE;YOU+CAN+%28NOT%29+ADVANCE;YOU+CAN+%28NOT%29+REDO;THRICE+UPON+A+TIME" alt="you can (not) redo"/>
 
 **I turn manual, repetitive business processes into AI-powered automations that run themselves.**
 
