@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/main/assets/nerv.svg" alt="NERV — god's in his heaven, all's right with the world → god is dead" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=18&pause=1400&color=8A0F0F&center=true&vCenter=true&width=820&lines=YOU+ARE+%28NOT%29+ALONE;YOU+CAN+%28NOT%29+ADVANCE;YOU+CAN+%28NOT%29+REDO;THRICE+UPON+A+TIME" alt="you can (not) redo"/>
+<img src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/main/assets/notredo.svg" width="55%" alt="you are (not) alone → you can (not) redo"/>
 
 **I turn manual, repetitive business processes into AI-powered automations that run themselves.**
 
@@ -57,6 +57,6 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=17&pause=2200&color=6A5F5C&center=true&vCenter=true&width=880&lines=god+is+dead+%E2%80%94+and+all%27s+right+with+the+world;Death+may+be+the+only+absolute+freedom+there+is.;Anywhere+can+be+paradise%2C+as+long+as+you+have+the+will+to+live.;The+fate+of+destruction+is+also+the+joy+of+rebirth." alt="quotes"/>
+<img src="https://raw.githubusercontent.com/Shinzuu/Shinzuu/main/assets/quotes.svg" width="72%" alt="god is dead — and all's right with the world"/>
 
 </div>
