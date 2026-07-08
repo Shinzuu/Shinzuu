@@ -80,9 +80,14 @@
     </radialGradient>
     <pattern id="lines" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#ffffff"/></pattern>
     <filter id="soft"><feGaussianBlur stdDeviation="0.55"/></filter>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050505" stop-opacity="1"/>
+      <stop offset="91%" stop-color="#050505" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
-  <rect width="1000" height="440" fill="#050505"/>
+  <rect width="1000" height="440" fill="url(#fade)"/>
   <rect id="hexfield" width="1000" height="440" fill="url(#hex)"/>
   <rect id="hellglow" width="1000" height="440" fill="url(#hell)"/>
   <rect id="vignette" width="1000" height="440" fill="url(#vig)"/>
