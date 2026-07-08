@@ -7,12 +7,12 @@
 **I turn manual, repetitive business processes into AI-powered automations that run themselves.**
 
 <a href="mailto:shinzuu.dev@gmail.com"><img src="https://img.shields.io/badge/Email-050505?style=flat-square&logo=gmail&logoColor=9a3410" alt="email"/></a>
+<a href="https://www.linkedin.com/in/nishadul-i-363786369/"><img src="https://img.shields.io/badge/LinkedIn-050505?style=flat-square&logo=linkedin&logoColor=9a3410" alt="linkedin"/></a>
 <img src="https://img.shields.io/badge/%E2%97%8F_open_to_automation_work-8a0f0f?style=flat-square" alt="open to work"/>
 <img src="https://komarev.com/ghpvc/?username=Shinzuu&label=connections&color=8a0f0f&style=flat-square" alt="connections"/>
 
-<!-- CONTACT: add your real handles, then uncomment this row —
+<!-- CONTACT: got more? add real handles then uncomment —
 <a href="https://YOUR-SITE.com"><img src="https://img.shields.io/badge/Portfolio-050505?style=flat-square&logo=googlechrome&logoColor=9a3410"/></a>
-<a href="https://www.linkedin.com/in/YOUR-HANDLE"><img src="https://img.shields.io/badge/LinkedIn-050505?style=flat-square&logo=linkedin&logoColor=9a3410"/></a>
 <a href="https://wa.me/YOUR-NUMBER"><img src="https://img.shields.io/badge/WhatsApp-050505?style=flat-square&logo=whatsapp&logoColor=9a3410"/></a>
 <a href="https://cal.com/YOUR-HANDLE"><img src="https://img.shields.io/badge/Book_a_call-050505?style=flat-square&logo=caldotcom&logoColor=9a3410"/></a>
 -->
