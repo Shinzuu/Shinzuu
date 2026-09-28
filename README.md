@@ -8,7 +8,7 @@
 
 <a href="mailto:shinzuu.dev@gmail.com"><img src="https://img.shields.io/badge/shinzuu.dev%40gmail.com-050505?style=flat-square&logo=gmail&logoColor=9a3410" alt="shinzuu.dev@gmail.com"/></a>
 <a href="https://www.linkedin.com/in/nishadul-i-363786369/"><img src="https://img.shields.io/badge/LinkedIn-050505?style=flat-square&logo=linkedin&logoColor=9a3410" alt="linkedin"/></a>
-<img src="https://img.shields.io/badge/%E2%97%8F_open_to_automation_work-8a0f0f?style=flat-square" alt="open to work"/>
+<a href="mailto:shinzuu.dev@gmail.com"><img src="https://img.shields.io/badge/%E2%97%8F_open_to_automation_work-8a0f0f?style=flat-square" alt="open to work"/></a>
 
 <!-- CONTACT: got more? add real handles then uncomment —
 <a href="https://YOUR-SITE.com"><img src="https://img.shields.io/badge/Portfolio-050505?style=flat-square&logo=googlechrome&logoColor=9a3410"/></a>
@@ -20,12 +20,12 @@
 
 ### ⬡ STACK ⬡
 
-![OpenAI](https://img.shields.io/badge/OpenAI-050505?style=flat-square&logo=openai&logoColor=9a3410)
-![Anthropic](https://img.shields.io/badge/Anthropic-050505?style=flat-square&logo=anthropic&logoColor=9a3410)
-![n8n](https://img.shields.io/badge/n8n-050505?style=flat-square&logo=n8n&logoColor=9a3410)
-![Make](https://img.shields.io/badge/Make-050505?style=flat-square&logo=make&logoColor=9a3410)
-![Zapier](https://img.shields.io/badge/Zapier-050505?style=flat-square&logo=zapier&logoColor=9a3410)
-![GoHighLevel](https://img.shields.io/badge/GoHighLevel-050505?style=flat-square&logoColor=8a0f0f)
+<a href="https://openai.com"><img src="https://img.shields.io/badge/OpenAI-050505?style=flat-square&logo=openai&logoColor=9a3410" alt="OpenAI"/></a>
+<a href="https://www.anthropic.com"><img src="https://img.shields.io/badge/Anthropic-050505?style=flat-square&logo=anthropic&logoColor=9a3410" alt="Anthropic"/></a>
+<a href="https://n8n.io"><img src="https://img.shields.io/badge/n8n-050505?style=flat-square&logo=n8n&logoColor=9a3410" alt="n8n"/></a>
+<a href="https://www.make.com"><img src="https://img.shields.io/badge/Make-050505?style=flat-square&logo=make&logoColor=9a3410" alt="Make"/></a>
+<a href="https://zapier.com"><img src="https://img.shields.io/badge/Zapier-050505?style=flat-square&logo=zapier&logoColor=9a3410" alt="Zapier"/></a>
+<a href="https://www.gohighlevel.com"><img src="https://img.shields.io/badge/GoHighLevel-050505?style=flat-square" alt="GoHighLevel"/></a>
 
 <sub>ai automation · workflow orchestration · integrations</sub>
 
