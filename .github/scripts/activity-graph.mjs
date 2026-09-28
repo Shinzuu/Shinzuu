@@ -36,18 +36,18 @@ const days = json.data.user.contributionsCollection.contributionCalendar.weeks
 const W = 1200, H = 420;
 const pad = { top: 70, right: 40, bottom: 60, left: 70 };
 const cw = W - pad.left - pad.right, ch = H - pad.top - pad.bottom;
+// Square-root y-axis: one big day would otherwise flatten every other day to zero.
 const max = Math.max(4, ...days.map((d) => d.contributionCount));
-const step = Math.ceil(max / 4);
-const yMax = step * 4;
 const x = (i) => pad.left + (i * cw) / (days.length - 1);
-const y = (v) => pad.top + ch - (v * ch) / yMax;
+const y = (v) => pad.top + ch - (Math.sqrt(v) * ch) / Math.sqrt(max);
 
 const pts = days.map((d, i) => [x(i), y(d.contributionCount)]);
 const line = pts.map(([px, py], i) => `${i ? "L" : "M"}${px.toFixed(1)},${py.toFixed(1)}`).join("");
 const area = `${line}L${x(days.length - 1).toFixed(1)},${y(0)}L${x(0).toFixed(1)},${y(0)}Z`;
 
-const grid = [0, 1, 2, 3, 4].map((k) => {
-  const v = k * step, gy = y(v).toFixed(1);
+const ticks = [...new Set([0, 1, 2, 3, 4].map((k) => Math.round((max * k * k) / 16)))];
+const grid = ticks.map((v) => {
+  const gy = y(v).toFixed(1);
   return `<line x1="${pad.left}" x2="${W - pad.right}" y1="${gy}" y2="${gy}" stroke="${theme.text}" stroke-opacity=".15"/>` +
     `<text x="${pad.left - 12}" y="${gy}" text-anchor="end" dominant-baseline="middle">${v}</text>`;
 }).join("");

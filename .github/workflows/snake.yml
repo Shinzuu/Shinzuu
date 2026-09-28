@@ -1,4 +1,4 @@
-name: generate snake
+name: profile assets
 
 on:
   schedule:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Generate activity graph SVG
         run: node .github/scripts/activity-graph.mjs ${{ github.repository_owner }} dist/activity-graph.svg
