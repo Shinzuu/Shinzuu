@@ -15,6 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate activity graph SVG
+        run: node .github/scripts/activity-graph.mjs ${{ github.repository_owner }} dist/activity-graph.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Generate snake SVGs
         uses: Platane/snk@v3
         with:
